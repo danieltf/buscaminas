@@ -1,7 +1,7 @@
 package com.neblire.games.buscaminas.game;
 
-import com.neblire.games.buscaminas.GameActivity;
 import com.neblire.games.buscaminas.Times;
+import com.neblire.games.buscaminas.activities.GameActivity;
 import com.neblire.games.buscaminas.game.Neighborhood.Iterator;
 
 import android.content.Context;

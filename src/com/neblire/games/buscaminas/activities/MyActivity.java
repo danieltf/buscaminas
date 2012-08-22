@@ -1,4 +1,4 @@
-package com.neblire.games.buscaminas;
+package com.neblire.games.buscaminas.activities;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;

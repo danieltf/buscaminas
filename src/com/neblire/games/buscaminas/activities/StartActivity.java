@@ -1,4 +1,7 @@
-package com.neblire.games.buscaminas;
+package com.neblire.games.buscaminas.activities;
+
+import com.neblire.games.buscaminas.R;
+import com.neblire.games.buscaminas.Times;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +16,7 @@ import android.widget.ImageView;
 public class StartActivity extends MyActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.start);
         
         Handler h = new Handler(new Handler.Callback() {
             public boolean handleMessage(Message msg) {

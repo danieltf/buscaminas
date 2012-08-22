@@ -1,6 +1,6 @@
 package com.neblire.games.buscaminas.game;
 
-import com.neblire.games.buscaminas.GameActivity;
+import com.neblire.games.buscaminas.activities.GameActivity;
 
 public abstract class Player{
 	protected int score;

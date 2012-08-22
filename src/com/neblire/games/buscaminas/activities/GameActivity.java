@@ -1,4 +1,4 @@
-package com.neblire.games.buscaminas;
+package com.neblire.games.buscaminas.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -70,62 +70,8 @@ public class GameActivity extends MyActivity {
 		game.resume();
 	}
 
-	private void createLayout(/*int rows*/) {
-//		switch (rows) {
-//		case 8: {
-//			setContentView(R.layout.main8);
-//			break;
-//		}
-//		case 9: {
-//			setContentView(R.layout.main9);
-//			break;
-//		}
-//		case 10: {
-//			setContentView(R.layout.main10);
-//			break;
-//		}
-//		case 11: {
-//			setContentView(R.layout.main11);
-//			break;
-//		}
-//		case 12: {
-//			setContentView(R.layout.main12);
-//			break;
-//		}
-//		case 13: {
-//			setContentView(R.layout.main13);
-//			break;
-//		}
-//		case 14: {
-//			setContentView(R.layout.main14);
-//			break;
-//		}
-//		case 15: {
-//			setContentView(R.layout.main15);
-//			break;
-//		}
-//		case 16: {
-//			setContentView(R.layout.main16);
-//			break;
-//		}
-//		case 17: {
-//			setContentView(R.layout.main17);
-//			break;
-//		}
-//		case 18: {
-//			setContentView(R.layout.main18);
-//			break;
-//		}
-//		case 19: {
-//			setContentView(R.layout.main19);
-//			break;
-//		}
-//		case 20: {
-//		setContentView(R.layout.main20);
-//			break;
-//		}
-//		}
-		setContentView(R.layout.mainok);
+	private void createLayout() {
+		setContentView(R.layout.game);
 		board = (BoardView) findViewById(R.id.game_view);
 		score = (TextView) findViewById(R.id.marcador);
 		info = (TextView) findViewById(R.id.info);

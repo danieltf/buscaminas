@@ -2,8 +2,8 @@ package com.neblire.games.buscaminas.game;
 
 import java.util.LinkedList;
 
-import com.neblire.games.buscaminas.GameActivity;
 import com.neblire.games.buscaminas.Times;
+import com.neblire.games.buscaminas.activities.GameActivity;
 
 public class Cpu extends Player{
     private int level;

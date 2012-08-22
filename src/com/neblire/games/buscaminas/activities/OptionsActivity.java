@@ -1,5 +1,8 @@
-package com.neblire.games.buscaminas;
+package com.neblire.games.buscaminas.activities;
 
+import com.neblire.games.buscaminas.ButtonsAppearance;
+import com.neblire.games.buscaminas.R;
+import com.neblire.games.buscaminas.Times;
 import com.neblire.games.buscaminas.game.GameConfig;
 
 import android.content.Intent;
@@ -30,7 +33,7 @@ public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFact
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.optionsmenu);
+        setContentView(R.layout.options);
         Bundle bundle = getIntent().getExtras();
         gameConfig = bundle.getParcelable(GameConfig.GAME_CONFIG_KEY);
         Animation in = AnimationUtils.loadAnimation(this,

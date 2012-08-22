@@ -1,6 +1,8 @@
-package com.neblire.games.buscaminas;
+package com.neblire.games.buscaminas.activities;
 
+import com.neblire.games.buscaminas.ButtonsAppearance;
 import com.neblire.games.buscaminas.R;
+import com.neblire.games.buscaminas.Times;
 import com.neblire.games.buscaminas.game.GameConfig;
 
 import android.app.AlertDialog;
@@ -22,7 +24,7 @@ public class MenuActivity extends MyActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainmenu);
+        setContentView(R.layout.menu);
         loadGameOptions();
         final Button op1 = (Button) findViewById(R.id.Button01);
         ButtonsAppearance.setDrawableTo(op1,1);
