@@ -23,7 +23,7 @@ public class MyWebSocket {
 //    	});
 		
 		
-		client = new WebSocketClient(URI.create("wss://192.168.1.34:9000/hola")) {
+		client = new WebSocketClient(URI.create("ws://192.168.1.34:9000/hola")) {
 
 			@Override
 			public void onClose(int arg0, String arg1, boolean arg2) {
