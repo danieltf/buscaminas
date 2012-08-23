@@ -9,6 +9,7 @@ import com.neblire.games.buscaminas.game.BoardView;
 import com.neblire.games.buscaminas.game.GameConfig;
 import com.neblire.games.buscaminas.game.GameControl;
 import com.neblire.games.buscaminas.game.Sound;
+import com.neblire.games.buscaminas.websocket.MyWebSocket;
 
 //	NOTA:	Debido a que no hay ningun activity que se vaya a colocar parcialmente delante de este,
 //			los eventos onPause() y onResume() no son necesario implementarlos.
@@ -17,9 +18,12 @@ public class GameActivity extends MyActivity {
 	public BoardView board;
 	public TextView score;
 	public TextView info;
+	public TextView servidor;
 	public ZoomControls zoom;
 	public GameControl game;
 	public int rows;
+	
+	public MyWebSocket socket;
 	
 	public boolean ready;
 	
@@ -75,6 +79,9 @@ public class GameActivity extends MyActivity {
 		board = (BoardView) findViewById(R.id.game_view);
 		score = (TextView) findViewById(R.id.marcador);
 		info = (TextView) findViewById(R.id.info);
+		
+		servidor = (TextView) findViewById(R.id.info);
+		
 		zoom = (ZoomControls) findViewById(R.id.zoom);
 		zoom.setVisibility(View.INVISIBLE);
 		board.setFocusable(true);

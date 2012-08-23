@@ -14,6 +14,7 @@ import com.neblire.games.buscaminas.game.OpeningCells;
 import com.neblire.games.buscaminas.game.Player;
 import com.neblire.games.buscaminas.game.Sound;
 import com.neblire.games.buscaminas.game.CellEnum;
+import com.neblire.games.buscaminas.websocket.MyWebSocket;
 
 public class GameControl {
 	private GameActivity activity;
@@ -213,6 +214,10 @@ public class GameControl {
 			public void run() {
 				Looper.prepare();
 				gameHandler = new Handler();
+				
+				activity.socket = new MyWebSocket(activity);
+				activity.socket.crear();
+				
 				while (! activity.ready){
 					Times.Wait(this, 100);
 				}
@@ -364,6 +369,9 @@ public class GameControl {
 	}
 	
 	public void cellSelected(int pos) {
+		
+		activity.socket.enviar("Se ha seleccionado la celda: " + pos);
+		
 		cells[pos].opened = true;
 		firstCellSelected(pos);
 		boolean changePlayer = true;
