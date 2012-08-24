@@ -16,7 +16,7 @@
     <string name="jug1">Jugador vs Androide</string>
     <string name="jug2">2 Jugadores -Local-</string>
     <string name="jug3">2 Jugadores -Bluetooth-\n(Pronto disponible)</string>
-    <string name="jug4">2 Jugadores -Internet-\n(Pronto disponible)</string>
+    <string name="jug4">2 Jugadores -Internet-</string>
     <string name="jug5">Batalla Multijugador\n(Pronto disponible)</string>
 	<string name="titulo1">Elige el modo de partida</string>
 <string name="options">Opciones</string>

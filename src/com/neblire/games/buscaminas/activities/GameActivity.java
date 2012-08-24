@@ -49,7 +49,7 @@ public class GameActivity extends MyActivity {
 		GameConfig config = (GameConfig) getIntent().getExtras().get(GameConfig.GAME_CONFIG_KEY);
 		
 		rows = config.rows;
-		createLayout(/*config.rows*/);
+		createLayout();
 		if (bundle != null){
 			Bundle b = bundle.getBundle("GameControl");
 			score.setText(bundle.getString("score"));

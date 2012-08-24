@@ -34,9 +34,9 @@ public class PlayActivity extends MyActivity {
         jug2 = (Button) findViewById(R.id.Button02);
         ButtonsAppearance.setDrawableTo(jug2, 1);
         jug3 = (Button) findViewById(R.id.Button03);
-        ButtonsAppearance.setDrawableTo(jug3,4);
+        ButtonsAppearance.setDrawableTo(jug3, 4);
         jug4 = (Button) findViewById(R.id.Button04);
-        ButtonsAppearance.setDrawableTo(jug4, 4);
+        ButtonsAppearance.setDrawableTo(jug4, 1);
         jug5 = (Button) findViewById(R.id.Button05);
         ButtonsAppearance.setDrawableTo(jug5, 4);
         
@@ -73,6 +73,23 @@ public class PlayActivity extends MyActivity {
 				}, Times.BUTTON_PRESSED);
 			}
 		});
+        jug4.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				ButtonsAppearance.setDrawableTo(jug4, 3);
+				ButtonsAppearance.disminuirTamTexto(jug4);
+				handler.postDelayed(new Runnable() {
+					public void run() {
+						ButtonsAppearance.aumentarTamTexto(jug4);
+		            	ButtonsAppearance.setDrawableTo(jug4, 1);
+		            	Intent intent = new Intent(PlayActivity.this, GameActivity.class);
+		            	gameConfig.player2 = GameConfig.PLAYER_IS_HUMAN;
+		            	gameConfig.player2Name = "Player_2";
+		            	intent.putExtras(bundle);
+						startActivity(intent);
+					}
+				}, Times.BUTTON_PRESSED);
+			}
+		});
         jug1.setOnFocusChangeListener(new OnFocusChangeListener() {
 			public void onFocusChange(View v, boolean hasFocus) {
 				if (hasFocus) {
@@ -88,6 +105,15 @@ public class PlayActivity extends MyActivity {
 					ButtonsAppearance.setDrawableTo(jug2, 2);
 				} else {
 					ButtonsAppearance.setDrawableTo(jug2, 1);
+				}					
+			}
+		});
+        jug4.setOnFocusChangeListener(new OnFocusChangeListener() {
+			public void onFocusChange(View v, boolean hasFocus) {
+				if (hasFocus) {
+					ButtonsAppearance.setDrawableTo(jug4, 2);
+				} else {
+					ButtonsAppearance.setDrawableTo(jug4, 1);
 				}					
 			}
 		});
